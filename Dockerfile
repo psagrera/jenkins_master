@@ -1,6 +1,12 @@
 FROM jenkins/jenkins:alpine
 
-RUN /usr/local/bin/install-plugins.sh git gitlab-plugin gitlab-hook docker-workflow robot ansible build-pipeline-plugin 
+RUN /usr/local/bin/install-plugins.sh git \
+    gitlab-plugin \
+    gitlab-hook \
+    docker-workflow \
+    robot ansible \
+    build-pipeline-plugin \
+    github-pullrequest
 
 ENV JENKINS_USER admin
 ENV JENKINS_PASS admin

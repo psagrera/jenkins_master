@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:alpine
+FROM jenkins/jenkins:2.222-alpine 
 
 RUN /usr/local/bin/install-plugins.sh git \
     gitlab-plugin \
